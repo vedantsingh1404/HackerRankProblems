@@ -1,0 +1,44 @@
+#include<iostream>
+
+using namespace std;
+
+#define ll long long 
+
+ll suma(ll a[], int n){
+    ll sum = 0;
+    for(int i = 0;i<n;i++){
+        sum += a[i];
+    }
+    return sum;
+}
+
+ll mina(ll a[], int n){
+    ll min = a[0];
+    for(int i = 1;i<n;i++){
+        if(a[i]<min) min = a[i];
+    }
+    return min;
+}
+
+ll maxa(ll a[], int n){
+    ll min = a[0];
+    for(int i = 1;i<n;i++){
+        if(a[i]>min) min = a[i];
+    }
+    return min;
+}
+
+int main(){
+    const int max = 5;
+    ll a[max];
+    
+    for(int i = 0;i<max;i++){
+        cin>>a[i];
+    }
+    
+    ll sumi = suma(a,max);
+    ll mini = mina(a,max);
+    ll maxi = maxa(a,max);
+    
+    cout<<sumi - maxi <<" "<<sumi - mini;
+}
