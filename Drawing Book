@@ -1,0 +1,19 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+    int n, p;
+    cin>>n>>p;
+    
+    int front = p/2;
+    int back;
+    if(n % 2 == 0) {
+        back = (n - p + 1) / 2;
+    }
+    else {
+        back = (n - p) / 2;
+    }
+    
+    cout<<min(front, back);
+}
