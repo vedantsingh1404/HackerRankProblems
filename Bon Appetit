@@ -1,0 +1,28 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    int n,k;
+    cin>>n>>k;
+    int order[100001];
+    
+    for(int i = 0;i<n;i++) {
+        cin>>order[i];
+    }
+    
+    int sum = 0;
+    for(int i = 0;i<n;i++) {
+        sum += order[i];
+    }
+    
+    int anna = (sum - order[k])/2 ;
+        
+    int b;
+    cin>>b;
+    
+    if(b == anna) cout<<"Bon Appetit";
+    else cout<< b - anna;
+    
+    return 0;
+}
