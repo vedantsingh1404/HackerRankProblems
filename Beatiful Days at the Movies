@@ -1,0 +1,29 @@
+#include<iostream>
+
+using namespace std;
+
+#define ll long long int
+
+int main() {
+    ll i, j, k;
+    cin >> i >> j >> k;
+    int count = 0;
+    
+    for(int l = i;l <= j;l++){
+        int rev = 0;
+        int temp = l;
+        while(temp > 0) {
+            int rem;
+            rem = temp % 10;
+            temp = temp / 10;
+            rev = (rev * 10) + rem;
+        }
+        
+        int diff = rev - l;
+        if((abs(diff) % k) == 0) {
+            count ++;
+        }
+    }
+    cout << count;
+    return 0;
+}
